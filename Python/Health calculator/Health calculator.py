@@ -27,7 +27,7 @@ def calculate_body_fat(age, waist_circumference, neck_circumference, hip_circumf
 st.title("Health Calculator App")
 
 # Images and Introduction
-st.image("https://example.com/health_image.jpg", use_column_width=True)  # Replace with a valid image URL
+st.image("images.jpeg", use_column_width=True)  # Replace with a valid image URL
 st.header("Welcome to the Health Calculator App!")
 st.write("""
 This app helps you calculate various health metrics, including BMI, BMR, 1RM, and Body Fat Percentage. 
