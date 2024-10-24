@@ -46,16 +46,16 @@ if mode == "BMI":
         bmi = calculate_bmi(weight, height)
         st.write(f"Your BMI is: {bmi:.2f}")
         if bmi < 18.5:
-            st.markdown("<p style='color:red;'>Underweight</p>", unsafe_allow_html=True)
+            st.warning("You are Underweight")
             suggestion = "Consider increasing your caloric intake with nutrient-dense foods."
         elif 18.5 <= bmi < 24.9:
-            st.markdown("<p style='color:green;'>Normal weight</p>", unsafe_allow_html=True)
+            st.succes("You are in Normal weight range.")
             suggestion = "Great job! Maintain a balanced diet and regular exercise."
         elif 25 <= bmi < 29.9:
-            st.markdown("<p style='color:red;'>Overweight</p>", unsafe_allow_html=True)
+            st.warning("You are Overweight.")
             suggestion = "Consider adopting a healthier lifestyle with regular physical activity."
         else:
-            st.markdown("<p style='color:red;'>Obesity</p>", unsafe_allow_html=True)
+            st.warning("You have Obesity.")
             suggestion = "Consult a healthcare provider for personalized advice."
 
 elif mode == "BMR":
@@ -93,10 +93,10 @@ elif mode == "Body Fat Percentage":
         body_fat = calculate_body_fat(age, waist_circumference, neck_circumference, hip_circumference, height, gender)
         st.write(f"Your Body Fat Percentage is: {body_fat:.2f}%")
         if body_fat < 18:
-            st.markdown("<p style='color:green;'>Healthy range</p>", unsafe_allow_html=True)
+            st.success("Healthy range")
             suggestion = "Keep up the good work!"
         else:
-            st.markdown("<p style='color:red;'>Consult a health professional</p>", unsafe_allow_html=True)
+            st.warning("Consult a health professional")
             suggestion = "Consider discussing your body composition with a healthcare provider."
 
 # Suggestions and Resources
